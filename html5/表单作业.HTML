@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #box {
+            width: 400px;
+            /* margin: 0 auto; */
+        }
+        
+        input {
+            width: 380px;
+            height: 20px;
+        }
+        
+        #sub {
+            background-color: grey;
+            border: none;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>学生信息</h1>
+    <fieldset id="box">
+        <legend style="color: red; ">学生档案</legend>
+        <form id="testform" method="get" action="form.asp">
+            <p>姓名：</p>
+            <input type="text" name="name1" required placeholder="请输入姓名" autofocus="autofocus" autocomplete="on" /><span> *</span>
+            <p>学号：</p>
+            <input type="text" name="xuehao" required placeholder="请输入学号" autofocus="autofocus" /><span> *</span>
+            <p>手机号码：</p>
+            <input type="tel" name="shoujihao" required placeholder="请输入手机号" autofocus="autofocus" /><span> *</span>
+            <p>邮箱地址：</p>
+            <input type="text" name="youxiangdizhi" required placeholder="请输入邮箱地址" autofocus="autofocus" /><span> *</span>
+            <p>录取学校：</p>
+            <input type="search" name="school" list="daxue" />
+            <datalist id="daxue">
+                    <option >南开大学</option>
+                    <option >北京大学</option>
+                    <option >清华大学</option>
+                    <option >河北大学</option>
+                </datalist>
+            <p>入学成绩：</p>
+            <input type="text" name="ruxuechengji" autofocus="autofocus" />
+            <p>入学时间：</p>
+            <p><input type="date" name="date" /></p>
+            <input type="submit" name="提交" autofocus="autofocus" id="sub" />
+        </form>
+    </fieldset>
+</body>
+
+</html>
