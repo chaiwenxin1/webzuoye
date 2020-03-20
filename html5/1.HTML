@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页换肤</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        fieldset {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        legend {
+            color: red;
+            font-weight: bold;
+            font-size: 50px;
+            margin-left: 30px;
+        }
+        
+        #side {
+            width: 1150px;
+            height: 55px;
+            border: 2px solid grey;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        ul li {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin: 15px 10px;
+        }
+        
+        #fam {
+            position: absolute;
+            top: 30px;
+            opacity: 0.6;
+            background: white;
+        }
+        
+        .skin0 {
+            margin: 0 auto;
+            width: 1100px;
+            height: 100px;
+            line-height: 40px;
+            background: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend style="color:red;">
+            网页换肤
+        </legend>
+        <div id="side">
+            <ul>
+                <li id="selected" title="灰色"></li>
+                <li title="紫色"></li>
+                <li title="红色"></li>
+                <li title="蓝色"></li>
+                <li title="橙色"></li>
+                <li title="绿色"></li>
+            </ul>
+            <span id="fam"></span>
+        </div>
+        <div id="text1" class="skin0">
+            <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，</p>
+            该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。
+        </div>
+    </fieldset>
+</body>
+<script>
+    var skins = document.getElementsByTagName("li");
+    var text1 = document.getElementById("text1");
+    var fam = document.getElementById("fam");
+    var title = ['灰色', '紫色', '红色', '蓝色', '橙色', '绿色'];
+    var left1 = ['25px', '70px', '115px', '160px', '205px', '250px'];
+    var arr = ['grey', 'purple', 'red', 'blue', 'orange', 'green'];
+    for (var i = 0; i < skins.length; i++) {
+        skins[i].style.background = arr[i];
+    }
+    window.onload = function() {
+        if (!window.localStorage) {
+            alert("您的浏览器不支持localStorage");
+        } else {
+            if (!localStorage.getItem("index")) {
+                skins[0].style.marginTop = "5px";
+
+            } else {
+                text1.style.background = localStorage.getItem("bgColor");
+                skins[parseInt(localStorage.getItem("index"))].style.marginTop = "5px";
+            }
+            for (var i = 0; i < skins.length; i++) {
+                skins[i].idx = i;
+                skins[i].onclick = function() {
+                    localStorage.setItem("index", this.idx);
+                    var inx = parseInt(localStorage.getItem("index"));
+                    localStorage.setItem("bgColor", String(skins[inx].style.background));
+                    text1.style.background = localStorage.getItem("bgColor");
+                    for (var j = 0; j < skins.length; j++) {
+                        skins[j].style.marginTop = "15px";
+                    }
+                    skins[index].style.marginTop = "5px";
+                }
+            }
+        }
+        var index = 0;
+        for (var i = 0; i < skins.length; i++) {
+            skins[i].idx = i;
+            skins[i].onmouseover = function() {
+                index = this.idx;
+                fam.innerHTML = title[index];
+                fam.style.border = "1px solid #aaa";
+                fam.style.background = "white";
+                fam.style.left = left1[index];
+            }
+            skins[i].onmouseout = function() {
+                index = this.idx;
+                fam.innerHTML = "";
+                fam.style.border = "";
+                fam.style.background = "";
+            }
+        }
+
+    }
+</script>
+
+</html>
