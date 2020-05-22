@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background-color: gainsboro;
+    }
+    
+    .wall {
+        width: 1200px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid green;
+    }
+    
+    .wall .pic {
+        width: 200px;
+        padding: 10px 10px 15px;
+        background-color: cadetblue;
+        box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+        position: absolute;
+        opacity: 0.8;
+        z-index: 1;
+        transition: all 0.5s ease-in;
+        -webkit-transition: all 0.5s ease-in;
+        ;
+        -moz-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+    }
+    
+    .wall .pic:hover {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg) scale(1.2);
+        z-index: 2;
+        background-color: #d3fcff;
+        opacity: 1;
+    }
+    
+    .wall .img1 {
+        left: 10px;
+        top: 50px;
+        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+    }
+    
+    .wall .img2 {
+        left: 300px;
+        top: 50px;
+        transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+    }
+    
+    .wall .img3 {
+        left: 590px;
+        top: 80px;
+        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+    }
+    
+    .wall .img4 {
+        left: 920px;
+        top: 60px;
+        transform: rotate(20deg);
+        -webkit-transform: rotate(-20deg);
+    }
+    
+    .wall .img5 {
+        top: 200px;
+        left: 200px;
+        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+    }
+    
+    .wall .img6 {
+        top: 200px;
+        left: 500px;
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+    }
+    
+    .wall .img7 {
+        top: 190px;
+        left: 800px;
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+    }
+</style>
+
+<body>
+    <div class="wall">
+        <img class="pic img1" src="images/22.JPG" alt="">
+        <img class="pic img2" src="images/33.JPG" alt="">
+        <img class="pic img3" src="images/44.JPG" alt="">
+        <img class="pic img4" src="images/55.JPG" alt="">
+        <img class="pic img5" src="images/66.JPG" alt="">
+        <img class="pic img6" src="images/77.JPG" alt="">
+        <img class="pic img7" src="images/88.JPG" alt="">
+    </div>
+</body>
+
+</html>
