@@ -85,7 +85,7 @@
     border-radius: 3px 0 0 3px;
     font-size: 18px;
     color: #535353;
-    background: #d3d3d8 url(../img/position.png) no-repeat 20% 50%;
+    background: #d3d3d8 url(img/position.png) no-repeat 20% 50%;
 }
 
 .search ul li input {
@@ -98,7 +98,7 @@
 .search ul li:nth-child(3) {
     width: 128px;
     height: 50px;
-    background: #cb5405 url(../img/search.png) no-repeat 50% 50%;
+    background: #cb5405 url(img/search.png) no-repeat 50% 50%;
     border-radius: 0 3px 3px 0;
 }
 
@@ -293,11 +293,11 @@
     }
     /* 使命与愿景 */
     .bg4 {
-        background: url("../img/back.png") no-repeat center 670%;
+        background: url("img/back.png") no-repeat center 670%;
         background-size: 100%;
     }
     .bg5 {
-        background: url("../img/back.png") no-repeat center -32%;
+        background: url("img/back.png") no-repeat center -32%;
         background-size: 100%;
     }
     .mission {
@@ -427,18 +427,18 @@
     }
     /* 背景图 */
     .mission div:nth-of-type(2) ul:nth-of-type(1) {
-        background-image: url("../img/rorate.png"), url("../img/icon1.png");
+        background-image: url("img/rorate.png"), url("../img/icon1.png");
         background-position: 50% 25%, 50% 30%;
         background-repeat: no-repeat, no-repeat;
         padding: 0;
     }
     .mission div:nth-of-type(2) ul:nth-of-type(2) {
-        background-image: url("../img/rorate.png"), url("../img/icon2.png");
+        background-image: url("img/rorate.png"), url("../img/icon2.png");
         background-position: 50% 25%, 50% 30%;
         background-repeat: no-repeat, no-repeat;
     }
     .mission div:nth-of-type(2) ul:nth-of-type(3) {
-        background-image: url("../img/rorate.png"), url("../img/icon3.png");
+        background-image: url("img/rorate.png"), url("../img/icon3.png");
         background-position: 50% 25%, 50% 30%;
         background-repeat: no-repeat, no-repeat;
     }
@@ -554,7 +554,7 @@
     .banner {
         width: 100%;
         height: 400px;
-        background: url('../img/banner.jpg') no-repeat center;
+        background: url('img/banner.jpg') no-repeat center;
     }
     .banner img {
         width: 0;
@@ -712,14 +712,14 @@
         border-radius: 10px;
         color: #666;
         font-size: 28px;
-        background: url("../img/hotR.png") no-repeat 85% 50%;
+        background: url("img/hotR.png") no-repeat 85% 50%;
         margin: 50px 0 0 230px;
     }
     /* 使命与愿景标题文字 */
     .bg5 {
         width: 100%;
         height: 1880px;
-        background: url("../img/back.png") no-repeat center 100px;
+        background: url("img/back.png") no-repeat center 100px;
         background-size: 110%;
         background-color: #fff;
         margin-top: 20px;
@@ -792,15 +792,15 @@
     }
     .mission div:nth-of-type(2) ul:nth-of-type(1) {
         padding-top: 45px;
-        background: url("../img/icon11.png") no-repeat 90px 50%;
+        background-image: url("img/icon11.png") no-repeat 90px 50%;
         background-size: 13%;
     }
     .mission div:nth-of-type(2) ul:nth-of-type(2) {
-        background: url("../img/icon22.png") no-repeat 90px 50%;
+        background: url("img/icon22.png") no-repeat 90px 50%;
         background-size: 13%;
     }
     .mission div:nth-of-type(2) ul:nth-of-type(3) {
-        background: url("../img/icon33.png") no-repeat 90px 50%;
+        background: url("img/icon33.png") no-repeat 90px 50%;
         background-size: 13%;
     }
     .mission div:nth-of-type(2) ul:nth-of-type(1) li {
